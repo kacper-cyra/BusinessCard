@@ -8,6 +8,7 @@
     <title>CodersCamp | Projekt 1 - HTML i CSS</title>
     <meta name="description" content="My basic portfolio.">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -16,20 +17,32 @@
     <div class="navbar-container">
     <nav class="nav">
         <div class="nav__logo">
-            <div class="nav__logo__image"></div>
+            <div class="nav__logo__image"><i class="fas fa-laptop-code"></i>Dev</div>
         </div>
         <ul class = "nav__links">
-            <li class="nav__links__listItem"><a href="">About me</a></li>
-            <li class="nav__links__listItem"><a href="">Skills</a></li>
-            <li class="nav__links__listItem"><a href="">Portfolio</a></li>
-            <li class="nav__links__listItem"><a href="">Contact</a></li>
+            <li class="nav__links__listItem"><a href="#about">About me</a></li>
+            <li class="nav__links__listItem"><a href="#skills">Skills</a></li>
+            <li class="nav__links__listItem"><a href="#portfolio">Portfolio</a></li>
+            <li class="nav__links__listItem"><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </div>
 </head>
 <main>
-    <section id="langing">
-        .background+text-wrapper>h1+h3+.media>ul.icons>li.icons__listElement*4>a>img.icons__listElement__icon
+    <section id="landing">
+        <div class="cover"></div>
+        <div class="content-wrapper">
+            <h1>Welcome!</h1>
+            <h3>My name is Kacper.</h3>
+            <div class="media">
+                <ul class="icons">
+                    <li class="icons__listElement"><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="icons__listElement"><a href=""><i class="fab fa-github"></i></a></li>
+                    <li class="icons__listElement"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="icons__listElement"><a href=""><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </section>
     <section>
         .action>h2{I am happy to help you with any problem!}+(.buttonsWrapper>.buttonsWrapper__button*2)      

@@ -1,0 +1,123 @@
+:root{
+    --colorMain: #FFC53D;
+    --colorText: #515151;
+    --gradient: linear-gradient(270deg, #FFC53D 14%, #FF9A3D 68.5%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF;
+    color: var(--colorText);
+}
+
+a{
+    color: var(--colorText);
+    text-decoration: none;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* basic styles */
+
+.navbar-container{
+    width: 100%;
+    height: 3rem;
+    padding: 1rem 0;
+}
+
+nav.nav{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+nav.nav .nav__logo{
+    font-size: 2.5rem
+}
+
+.nav__links__listItem{
+    margin: 0 20px;
+    padding: 8px 10px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.nav__links__listItem::before{
+    content: "";
+    display: block;
+    width: 100%;
+    transition: clip-path 0.5s ease-in-out;
+    background-image: var(--gradient);
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    will-change: clip-path;
+    top: -4px;
+    left: -5px;
+}
+
+.nav__links__listItem:hover::before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#landing{
+    width: 100%;
+    height: 100vh;
+    background: url(./src/img/c4a793759e52bd7dc91faccbe038fce4.jpeg);
+    background-size: cover;
+    position: relative;
+}
+
+#landing .cover{
+    background: url(./src/img/b458df5b4c863c4e34e5978dbe4b1097.jpeg);
+    background-size: cover;
+    mix-blend-mode: lighten;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+#landing .content-wrapper{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    text-align: center;
+}
+
+#landing h1{
+    font-size: 7rem;
+    color: var(--colorMain);
+    margin-bottom: 0;
+}
+
+#landing h3{
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: #fff
+}
+
+#landing .icons{
+    margin: 0 auto;
+    width: 50%;
+    justify-content: space-around;
+}
+
+#landing .icons__listElement i{
+    font-size: 2rem;
+    color: white;
+}
