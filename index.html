@@ -8,6 +8,8 @@
     <title>CodersCamp | Projekt 1 - HTML i CSS</title>
     <meta name="description" content="My basic portfolio.">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 
@@ -45,19 +47,152 @@
         </div>
     </section>
     <section>
-        .action>h2{I am happy to help you with any problem!}+(.buttonsWrapper>.buttonsWrapper__button*2)      
+        <div class="action">
+            <h2>I am happy to help you with any problem!</h2>
+            <div class="buttonsWrapper">
+                <a href="#"><div class="buttonsWrapper__button">Contact me!</div></a>
+                <a href="#"><div class="buttonsWrapper__button">Check my CV</div></a>
+            </div>
+        </div>
     </section>
     <section id="about">
-        .card>.card__icon+(card__info>ul.card__info__list>li.card__info__list__element*5)+card__divider+card__description
+        <div class="greyRectangle"></div>
+        <h2 class="tittle">About me</h2>
+        <div class="card">
+            <div class="card__iconWrapper">
+                <div class="card__iconWrapper__icon"></div>
+            </div>
+            <div class="card__info">
+                <ul class="card__info__list">
+                    <li class="card__info__list__element">
+                        <span>Full Name: </span>
+                        <span>Kacper Cyranowski</span>
+                    </li>
+                    <li class="card__info__list__element">
+                        <span>Age: </span>
+                        <span>21 Years</span>
+                    </li>
+                    <li class="card__info__list__element">
+                        <span>Profile: </span>
+                        <span>Fullstack</span>
+                    </li>
+                    <li class="card__info__list__element">
+                        <span>Telephone: </span>
+                        <span>+48 500-500-500</span>
+                    </li>
+                    <li class="card__info__list__element">
+                        <span>E-mail: </span>
+                        <span>night-coding@dev.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card__divider divider"></div>
+            <div class="card__description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ex ea commodo consequat.</p>
+            </div>
+        </div>
     </section>
     <section id="skills">
-        h2.tittle+.wrapper>.card>ul.card__list>li.card__list__element>
+        <div class="greyRectangle">
+            <h2 class="tittle">Skills</h2>
+        </div>
+        <div class="card">
+            <div class="card__element">
+                <div class="card__element__icon graphic"></div>
+                <div class="textWrapper">
+                    <span>UX/UI</span>
+                    <span>Figma</span>
+                </div>
+            </div>
+            <div class="card__divider divider"></div>
+            <div class="card__element">
+                <div class="card__element__icon frontEnd"></div>
+                <div class="textWrapper">
+                    <span>Front End</span>
+                    <span>Html, CSS, JavaScript</span>
+                </div>
+            </div>
+            <div class="card__divider divider"></div>
+            <div class="card__element">
+                <div class="card__element__icon backEnd"></div>
+                <div class="textWrapper">
+                    <span>Back End</span>
+                    <span>PHP, Node.js</span>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="portolio">
-        h2.tittle+.grid>grid__item*5>h3+p+.button
+    <section id="portfolio">
+        <h2 class="tittle">Portfolio</h2>
+        <div class="grid">
+            <div class="grid__item1">
+                <div class="cover">
+                    <h3>Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#"><span class="button">View</span></a>
+                </div>
+            </div>
+            <div class="grid__item2">
+                <div class="cover">
+                    <h3>Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#"><span class="button">View</span></a>
+                </div>
+            </div>
+            <div class="grid__item3">
+                <div class="cover">
+                    <h3>Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#"><span class="button">View</span></a>
+                </div>
+            </div>
+            <div class="grid__item4">
+                <div class="cover">
+                    <h3>Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#"><span class="button">View</span></a>
+                </div>
+            </div>
+            <div class="grid__item5">
+                <div class="cover">
+                    <h3>Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#"><span class="button">View</span></a>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="contact">
-        h2.tittle+.wrapper>.leftSide>(.leftSide__icon+p.leftSide__description+.leftSide__break+(ul.leftSide__media>li.leftSide__media__icon*4>a>img)+(ul.leftSide__info>li.leftSide__info__line*5))+.rightSide>h3.tittle+form.contactForm>input.contactForm--name:text+input.contactForm--email:email+input.contactForm--topic:text+input.contactForm--message:text
+        <h2 class="tittle"></h2>
+        <div class="wrapper">
+            <div class="leftSide">
+                <div class="leftSide__icon"></div>
+                <p class="leftSide__description"></p>
+                <div class="leftSide__break"></div>
+                <ul class="leftSide__media">
+                    <li class="leftSide__media__icon"><a href=""><img src="" alt=""></a></li>
+                    <li class="leftSide__media__icon"><a href=""><img src="" alt=""></a></li>
+                    <li class="leftSide__media__icon"><a href=""><img src="" alt=""></a></li>
+                    <li class="leftSide__media__icon"><a href=""><img src="" alt=""></a></li>
+                </ul>
+                <ul class="leftSide__info">
+                    <li class="leftSide__info__line"></li>
+                    <li class="leftSide__info__line"></li>
+                    <li class="leftSide__info__line"></li>
+                    <li class="leftSide__info__line"></li>
+                    <li class="leftSide__info__line"></li>
+                </ul>
+                <div class="rightSide">
+                    <h3 class="tittle"></h3>
+                    <form action="" class="contactForm">
+                        <input type="text" class="contactForm--name:text">
+                        <input type="text" class="contactForm--email:email">
+                        <input type="text" class="contactForm--topic:text">
+                        <input type="text" class="contactForm--message:text">
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 

@@ -1,15 +1,26 @@
+@import "./components/divider.css";
+
 :root{
     --colorMain: #FFC53D;
+    --colorSecond: #FAFAFF;
     --colorText: #515151;
     --gradient: linear-gradient(270deg, #FFC53D 14%, #FF9A3D 68.5%);
+    --shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #FFF;
     color: var(--colorText);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
 
 a{
@@ -24,16 +35,48 @@ ul{
     padding: 0;
 }
 
-/* basic styles */
+@keyframes GradientAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.greyRectangle{
+    background-color: var(--colorSecond);
+}
+
+.buttonsWrapper{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.buttonsWrapper__button, .button{
+    border: solid 1px var(--colorMain);
+    border-radius: 15px;
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+    background-image: var(--gradient);
+    color: #fff;
+    will-change: background-image;
+}
+
+.buttonsWrapper__button:hover{
+    animation: GradientAnimation 2s ease infinite;
+}
+
+/********** 
+    nav 
+***********/
 
 .navbar-container{
     width: 100%;
-    height: 3rem;
+    height: 5rem;
     padding: 1rem 0;
 }
 
 nav.nav{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
@@ -73,9 +116,13 @@ nav.nav .nav__logo{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+/************* 
+    landing 
+**************/
+
 #landing{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 5rem);
     background: url(./src/img/c4a793759e52bd7dc91faccbe038fce4.jpeg);
     background-size: cover;
     position: relative;
@@ -92,10 +139,9 @@ nav.nav .nav__logo{
 
 #landing .content-wrapper{
     width: 50%;
-    height: 50%;
     position: absolute;
     left: 25%;
-    top: 15%;
+    top: 10%;
     text-align: center;
 }
 
@@ -113,11 +159,269 @@ nav.nav .nav__logo{
 
 #landing .icons{
     margin: 0 auto;
-    width: 50%;
+    width: 40%;
     justify-content: space-around;
 }
 
 #landing .icons__listElement i{
     font-size: 2rem;
     color: white;
+}
+
+/*************
+    action
+**************/
+
+.action{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 1.5rem auto;
+}
+
+.action h2{
+    text-align: center;
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+/***********
+    About
+************/
+
+#about{
+    padding: 3rem 0;
+    position: relative;
+}
+
+#about .tittle{
+    margin-left: 8rem;
+}
+
+#about .greyRectangle{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#about .card{
+    background-color: #fff;
+    width: calc(100% - 12rem);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    margin: 1rem 6rem;
+    box-shadow: var(--shadow);
+}
+
+#about .card__iconWrapper{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about .card__iconWrapper__icon{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-image: var(--gradient);
+}
+
+.card__info{
+    width: 20%;
+}
+
+.card__info__list{
+    display: flex;
+    direction: colum;
+    flex-wrap: wrap;
+}
+
+.card__info__list__element{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card__info__list__element:last-child{
+    margin-bottom: 0;
+}
+
+.card__info__list__element span:first-child{
+    font-weight: bold;
+}
+
+.card__info__list__element span:last-child{
+    color: var(--colorMain);
+}
+
+.card__description{
+    width: 50%;
+    line-height: 2rem;
+}
+
+/*************
+    Skills
+**************/
+
+#skills{
+    width: 100%;
+    margin: 7rem 0 0 0;
+    padding: 2rem 0 0 0;
+    position: relative;
+}
+
+#skills .greyRectangle{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+#skills .tittle{
+    position: relative;
+    z-index: 2;
+    margin-left: 5rem;
+}
+
+#skills .card{
+    width: 85%;
+    margin: 4rem 5% 4rem 10%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 4rem;
+    box-shadow: var(--shadow);
+    background-color: #FFF;
+}
+
+#skills .card__element{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#skills .card__element__icon{
+    margin-bottom: 2rem;
+    height: 100px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#skills .textWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#skills .textWrapper span{
+    width: 100%;
+    text-align: center;
+}
+
+#skills .textWrapper span:first-child{
+    color: var(--colorMain);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#skills .graphic{
+    background-image: url("./src/img/skills_1.svg");
+}
+
+#skills .frontEnd{
+    background-image: url("./src/img/skills_2.svg");
+}
+
+#skills .backEnd{
+    background-image: url("./src/img/skills_3.svg");
+}
+
+/*****************
+    Poftfolio
+******************/
+#portfolio{
+    margin-top: 2rem;
+}
+
+#portfolio .tittle{
+    width: 100%;
+    text-align: center;
+}
+
+#portfolio .grid {
+    display: grid;
+    height: 700px;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+}
+
+#portfolio .grid > div{
+    background-size: cover;
+}
+
+#portfolio .grid__item1{
+    grid-area: 1 / 1 / 2 / span 2;
+    background-image: url("/src/img/work-abroad-unspl.png");
+}
+
+#portfolio .grid__item2{
+    grid-area: 1 / 3 / 2 / 4;
+    background-image: url("./src/img/20180619_150208-1.png");
+}
+
+#portfolio .grid__item3{
+    grid-area: 1 / 4 / 2 / span 2;
+    background-image: url("./src/img/RAW-BEETROOT.png");
+}
+
+#portfolio .grid__item4{
+    grid-area: 2 / 1 / 3 / 2;
+    background-image: url("./src/img/32739439685_8ac3345836_b.png");
+}
+
+#portfolio .grid__item5{
+    grid-area: 2 / 2 / 3 / 6;
+    background-image: url("./src/img/porady-grafiki_10_u1.png");
+}
+
+#portfolio .cover{
+    padding: 2rem 2rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    will-change: opacity;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(34, 34, 34, 0.5) 0%, rgba(255, 154, 61, 0.5) 100%);
+}
+
+#portfolio .cover:hover{
+    opacity: 1;
+}
+
+#portfolio .cover p{
+    margin-bottom: 2rem;
+    max-width: 440px;
+}
+
+/**************
+    contact
+***************/
+
+#contact{
+    background-color: var(--colorSecond);
+}
+
+#contact .wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#contact .wrapper{
+    width: 100%;
+    
 }

@@ -1,0 +1,4 @@
+.divider{
+    width: 0px;
+    border-left: dotted 5px var(--colorMain);
+}
