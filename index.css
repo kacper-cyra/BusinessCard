@@ -65,6 +65,32 @@ ul{
     animation: GradientAnimation 2s ease infinite;
 }
 
+.underscore{
+    text-decoration: underline;
+}
+
+input, textarea{
+    background: var(--colorSecond);
+    border-radius: 15px;
+    height: 55px;
+    width: 100%;
+    transition: box-shadow .4s ease-in-out;
+    will-change: box-shadow;
+    border-width: 0px;
+}
+
+textarea{
+    resize: none;
+}
+
+input:not(.button):focus, textarea:focus{
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+input::placeholder, textarea::placeholder{
+    color: #808080;
+    margin-top: 0;
+}
+
 /********** 
     nav 
 ***********/
@@ -227,7 +253,8 @@ nav.nav .nav__logo{
     width: 125px;
     height: 125px;
     border-radius: 50%;
-    background-image: var(--gradient);
+    background-image: url("./src/img/profile.jpg");
+    background-size: cover;
 }
 
 .card__info{
@@ -345,7 +372,7 @@ nav.nav .nav__logo{
     Poftfolio
 ******************/
 #portfolio{
-    margin-top: 2rem;
+    margin-top: 10rem;
 }
 
 #portfolio .tittle{
@@ -414,14 +441,119 @@ nav.nav .nav__logo{
 
 #contact{
     background-color: var(--colorSecond);
+    padding: 5rem 0 5rem 0;
 }
 
-#contact .wrapper{
-    width: 90%;
+#contact .tittleWrapper{
+    width: 87.5%;
+    max-width: 1215px;
     margin: 0 auto;
 }
 
 #contact .wrapper{
-    width: 100%;
-    
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: var(--shadow);
 }
+
+#contact .wrapper .leftSide{
+    width: 45%;
+    background-color: var(--colorMain);
+    color: #fff;
+    padding: 2rem 4rem;
+}
+
+#contact .leftSide__icon{
+    background-image: url("./src/img/logo_message.svg");
+    background-repeat: no-repeat;
+    height: 75px;
+    width: 75px;
+}
+
+#contact .leftSide__description{
+    max-width: 300px;
+    line-height: 2rem;
+}
+
+#contact .leftSide__media > li{
+    font-size: 1.5rem;
+    margin: 1rem 0.75rem;
+
+}
+
+#contact .leftSide__media > li:first-child{
+    margin-left: 0;
+}
+
+#contact .leftSide__media i::before{
+    color: #fff
+}
+
+#contact .leftSide__break{
+    height: 6rem;
+}
+
+#contact .leftSide__info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contact .leftSide__info li{
+    width: 100%;
+    margin: 0.1rem 0;
+}
+
+#contact .leftSide__info li a{
+    color: #fff;
+}
+
+#contact .separator{
+    width: 2.5rem;
+    position: relative;
+    background-color: #fff;
+}
+
+#contact .separator::before{
+    content: '';
+    position: absolute;
+    top: 1rem;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    width: 100%;
+    height: 3rem;
+    background-color: var(--colorMain);
+}
+
+#contact .rightSide{
+    background-color: #fff;
+}
+
+#contact .contactForm{
+    width: 85%;
+    margin: 2rem auto;
+}
+
+#contact .contactForm input, #contact .contactForm textarea{
+    margin: 0.5rem 0;
+    max-width: 640px;
+    border: none;
+    padding-left: 2rem;
+}
+
+#contact .contactForm--message{
+    height: 10rem;
+    padding: 1.5rem;
+}
+
+#contact .contactForm__btnWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+}
+
+#contact .contactForm__btnWrapper--button{
+    width: auto;
+}
+

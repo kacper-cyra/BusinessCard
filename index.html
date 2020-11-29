@@ -38,10 +38,10 @@
             <h3>My name is Kacper.</h3>
             <div class="media">
                 <ul class="icons">
-                    <li class="icons__listElement"><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="icons__listElement"><a href=""><i class="fab fa-github"></i></a></li>
-                    <li class="icons__listElement"><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="icons__listElement"><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li class="icons__listElement"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="icons__listElement"><a href="#"><i class="fab fa-github"></i></a></li>
+                    <li class="icons__listElement"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="icons__listElement"><a href="#"><i class="fab fa-twitter"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -163,34 +163,41 @@
         </div>
     </section>
     <section id="contact">
-        <h2 class="tittle"></h2>
+        <div class="tittleWrapper">
+        <h2 class="tittleWrapper__tittle">Contact us</h2>
+        </div>
         <div class="wrapper">
             <div class="leftSide">
                 <div class="leftSide__icon"></div>
-                <p class="leftSide__description"></p>
+                <p class="leftSide__description">Please describe your question.
+                    Send me a message and I will answer you as soon as possible! </p>
                 <div class="leftSide__break"></div>
                 <ul class="leftSide__media">
-                    <li class="leftSide__media__icon"><a href=""><img src="" alt=""></a></li>
-                    <li class="leftSide__media__icon"><a href=""><img src="" alt=""></a></li>
-                    <li class="leftSide__media__icon"><a href=""><img src="" alt=""></a></li>
-                    <li class="leftSide__media__icon"><a href=""><img src="" alt=""></a></li>
+                    <li class="icons__listElement"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="icons__listElement"><a href="#"><i class="fab fa-github"></i></a></li>
+                    <li class="icons__listElement"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="icons__listElement"><a href="#"><i class="fab fa-twitter"></i></a></li>
                 </ul>
                 <ul class="leftSide__info">
-                    <li class="leftSide__info__line"></li>
-                    <li class="leftSide__info__line"></li>
-                    <li class="leftSide__info__line"></li>
-                    <li class="leftSide__info__line"></li>
-                    <li class="leftSide__info__line"></li>
+                    <li class="leftSide__info__line"><strong>Designer</strong></li>
+                    <li class="leftSide__info__line"><strong>Poland, Wrocław</strong></li>
+                    <li class="leftSide__info__line">ul. Tęczowa 12/3 50-000</li>
+                    <li class="leftSide__info__line">+48 500-500-500</li>
+                    <li class="leftSide__info__line underscore"><a href="mailto:night-coding@dev.com">night-coding@dev.com</a></li>
                 </ul>
-                <div class="rightSide">
-                    <h3 class="tittle"></h3>
-                    <form action="" class="contactForm">
-                        <input type="text" class="contactForm--name:text">
-                        <input type="text" class="contactForm--email:email">
-                        <input type="text" class="contactForm--topic:text">
-                        <input type="text" class="contactForm--message:text">
-                    </form>
-                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="rightSide">
+                <form action="" class="contactForm">
+                    <h3 class="tittle">Let's start!</h3>
+                    <input type="text" class="contactForm--name" placeholder="Name">
+                    <input type="email" class="contactForm--email" placeholder="Your e-mail address">
+                    <input type="text" class="contactForm--topic" placeholder="Topic">
+                    <textarea class="contactForm--message" placeholder="Message" ></textarea>
+                    <div class="contactForm__btnWrapper">
+                        <input class="contactForm__btnWrapper--button button" type="submit" value="Send">
+                    </div>
+                </form>
             </div>
         </div>
     </section>
